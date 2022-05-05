@@ -51,6 +51,10 @@ export const Game = () => {
 
   const isShuffling = !!(ballPosition && shufflesLeft);
 
+  const shuffleMatrixStep = isShuffling
+    ? shuffleMatrix[shufflesLeft - 1]
+    : shuffleMatrix[shuffleMatrix.length - 1];
+
   return (
     <Container isShuffling={isShuffling}>
       <Board>
@@ -71,11 +75,7 @@ export const Game = () => {
             key={id}
             isGameRunning={isGameRunning}
             isShuffling={isShuffling}
-            shuffleTo={
-              isShuffling
-                ? shuffleMatrix[shufflesLeft - 1][index]
-                : shuffleMatrix[shuffleMatrix.length - 1][index]
-            }
+            shuffleTo={shuffleMatrixStep[index]}
             onIteration={index === 0 ? onIteration : noop}
             showContent={!isGameRunning && userChoice === id}
             isWinner={winner === id}
