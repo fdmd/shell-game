@@ -1,6 +1,6 @@
 # Shell game
 
-End result available at https://shell-game-923rgvi5l-fdmd.vercel.app/ (Desktop only)
+End result available at https://shell-game.vercel.app/ (Desktop only)
 
 ## Scripts
 
