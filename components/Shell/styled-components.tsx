@@ -16,10 +16,10 @@ export const goVertical = (steps: number) => keyframes`
         top: 0;
     }
     40% {
-        top: ${steps * 200}px;
+        top: ${steps * 300}px;
     }
     60% {
-        top: ${steps * 200}px;
+        top: ${steps * 300}px;
     }
     to {
         top: 0;
